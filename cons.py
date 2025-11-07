@@ -10,4 +10,4 @@ def cons_AddPass_o(config: Config):
 def cons_Obfuscator_so(config: Config):
   deps = batch([cons_AddPass_o, cons_Obfuscation_a], config)
   cmd = f"{config.cxx} -fuse-ld={config.ld} -fPIC -shared {config.link_flags} {{_deps}} -o {{_target}}"
-  return task(cm, "libObfuscator.so", deps, cmd)
+  return task(cm, "libObfuscatorPass.so", deps, cmd)
