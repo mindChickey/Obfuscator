@@ -15,6 +15,7 @@ sources = [
   "Substitution.cpp",
   "IndirectBranch.cpp",
   "IndirectCall.cpp",
+  "IndirectGlobalVariable.cpp"
 ]
 
 def cons_Obfuscation_a(config: Config):
