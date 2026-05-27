@@ -86,7 +86,7 @@ bool IndirectCallPass::doIndirctCall(Function &Fn){
         Value *DestAddr = IRB.CreateGEP(Type::getInt8Ty(Ctx), EncDestAddr, Secret);
 
         Value *FnPtr = IRB.CreateBitCast(DestAddr, FTy->getPointerTo());
-        FnPtr->setName("Call_" + Callee->getName());
+        // FnPtr->setName("Call_" + Callee->getName());
         CB->setCalledOperand(FnPtr);
     }
 
